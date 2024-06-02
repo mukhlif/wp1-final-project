@@ -1,0 +1,90 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: "Shadows Into Light", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    scroll-behavior:smooth;
+    
+}
+body{
+    background-color: #4B4453;
+    color: #845EC2;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding:.7rem; */
+    padding: 50px;
+   
+}
+
+.container h1{
+    font-weight: 100;
+    color:white;
+}
+.container .nav ul li{
+    display: inline;
+    list-style: none;
+
+}
+a{
+    color:white;
+    text-decoration: none;
+    margin-right:1rem;
+    font-size: 1.3rem;
+    
+}
+
+.books-container{
+    padding:2rem;
+    display:grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap:3rem .6rem;
+}
+.books-container .book-card{
+    text-align: center;
+    border:2px solid #845EC2;
+    padding:1rem 0;
+    position:relative;
+    box-shadow: 10px 10px 10px #845EC2;
+}
+.books-container .book-card img{
+    width:300px;
+    height:300px;
+}
+.books-container .book-card .sold::before{
+    content:"sold";
+    position:absolute;
+    width:30px;
+    height:30px;
+    border-radius: 50%;
+    color:#000001;
+    background-color: #fff;
+    right:0;
+    text-align: center;
+}
+.books-container .book-card .book-info .book-name{
+    margin-bottom:1rem;
+    
+}
+.books-container .book-card .book-info h2,span {
+    font-size: 1rem;
+
+}
+
+@media(max-width:676px){
+    .main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        font-size: 1rem;
+        text-align: center;
+    }
+}
